@@ -1,0 +1,46 @@
+{
+  "name": "mock-it-marketplace",
+  "version": "1.0.0",
+  "description": "Mock IT Marketplace Platform - Event-driven system for n8n Hackathon 2026",
+  "main": "dist/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "db:migrate": "tsx src/database/migrate.ts",
+    "db:seed": "tsx src/database/seed.ts",
+    "admin:key": "tsx src/scripts/generate-admin-key.ts"
+  },
+  "keywords": ["n8n", "hackathon", "event-sourcing", "marketplace"],
+  "author": "n8n Hackathon Team",
+  "license": "MIT",
+  "dependencies": {
+    "better-sqlite3": "^11.7.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "uuid": "^11.0.3",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/jest": "^29.5.14",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/node": "^22.10.2",
+    "@types/supertest": "^6.0.2",
+    "@types/uuid": "^10.0.0",
+    "@types/ws": "^8.5.13",
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0",
+    "ts-jest": "^29.2.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
